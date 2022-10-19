@@ -4,12 +4,12 @@ const LS_FAV_KEY = "rfk";
 const LS_URL_KEY = "ruk";
 
 interface GithubState {
-  favorites: [Object];
+  favorites: [{}];
   url: String[];
 }
 
 const initialState: GithubState = {
-  favorites: JSON.parse(localStorage.getItem(LS_FAV_KEY) ?? "[Object]"),
+  favorites: JSON.parse(localStorage.getItem(LS_FAV_KEY) ?? "[{}]"),
   url: JSON.parse(localStorage.getItem(LS_URL_KEY) ?? "[]"),
 };
 
